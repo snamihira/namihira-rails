@@ -3,15 +3,15 @@ class HeloController < ApplicationController
     def index
         if request.post? then
             @title = 'Result'
-            if params['check1'] then
-                @msg = 'you Checked!!'
+            if params['r1'] then
+                @msg = 'you selected: ' + params['r1']
             else
-                @msg = 'not checked...'
+                @msg = 'not selected...'
             end
 
         else
-            @title = 'INdex'
-            @msg = 'check it...'
+            @title = 'Index'
+            @msg = 'selected radio button...'
         end
 
     end
